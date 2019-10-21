@@ -7,40 +7,11 @@
 </ion-header>
 
 <ion-content>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/10/200/200"></ion-img>
+   <ion-card  button *ngFor="let activity of (activityList | async)">
+     <ion-img [src]="activity.cropped"></ion-img>
      <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
+       <ion-card-title>{{activity.name}}</ion-card-title>
      </ion-card-header>
    </ion-card>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/2/200/200"></ion-img>
-     <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
-     </ion-card-header>
-   </ion-card>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/32/200/200"></ion-img>
-     <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
-     </ion-card-header>
-   </ion-card>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/40/200/200"></ion-img>
-     <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
-     </ion-card-header>
-   </ion-card>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/51/200/200"></ion-img>
-     <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
-     </ion-card-header>
-   </ion-card>
-   <ion-card>
-     <ion-img src="https://picsum.photos/id/16/200/200"></ion-img>
-     <ion-card-header>
-       <ion-card-title>Dummy Image</ion-card-title>
-     </ion-card-header>
-   </ion-card>
+   
 </ion-content>
