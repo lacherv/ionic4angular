@@ -11,12 +11,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ActivityDetailPage implements OnInit {
   activityDetail: Observable<Activity>;
+
   constructor(
     activityService: ActivityService,
     activatedRoute: ActivatedRoute
   ) {
     const activityID = activatedRoute.snapshot.params.activityID;
-    // console.log(activityID);
     this.activityDetail = activityService.getActivity(activityID);
   }
 
